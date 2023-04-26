@@ -1,0 +1,160 @@
+/*======================================
+	Road Map CSS
+========================================*/
+.road-map {
+    background-image: url('../images/road-map/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-bottom: 200px;
+
+    @media #{$md} {
+        padding-bottom: 120px;
+    }
+
+    @media #{$xs} {
+        padding-bottom: 100px;
+    }
+
+    .road-map-slider {
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .tns-nav {
+        text-align: center;
+        position: absolute;
+        bottom: -100px;
+        transform: translateX(-50%);
+        width: 100%;
+        left: 50%;
+        z-index: 9;
+        margin: 0;
+
+        @media #{$md} {
+            bottom: -60px;
+        }
+
+        @media #{$xs} {
+            bottom: -50px;
+        }
+
+        button {
+            height: 6px;
+            width: 14px;
+            background-color: $black;
+            border-radius: 5px;
+            display: inline-block;
+            border: none;
+            margin: 0px 5px;
+            transition: all 0.4s ease;
+
+            &:hover {
+                background-color: $theme-color;
+            }
+
+            &.tns-nav-active {
+                width: 25px;
+                background-color: $theme-color;
+            }
+        }
+    }
+
+    .top-row {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 50%;
+            width: 100%;
+            margin-top: -1px;
+            height: 2px;
+            background: $theme-color;
+        }
+
+    }
+
+    .single-map {
+        border-radius: 5px;
+        background-color: $white;
+        padding: 25px 20px;
+        position: relative;
+        transition: all 0.4s ease;
+
+        &:hover {
+            background-color: $theme-color;
+
+            .arrow {
+                background-color: $theme-color;
+            }
+
+            h3 {
+                color: $white;
+
+                span {
+                    color: $white;
+                }
+            }
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            left: 50%;
+            bottom: -49px;
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 2px solid $theme-color;
+            margin-left: -9px;
+        }
+
+        .arrow {
+            height: 16px;
+            width: 16px;
+            background-color: #fff;
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: -8px;
+            -webkit-transform: rotate(45deg) translateX(-50%);
+            transform: rotate(45deg);
+            margin-left: -8px;
+            transition: all 0.4s ease;
+        }
+
+        &.down {
+            margin-top: 200px;
+
+            &::before {
+                bottom: auto;
+                top: -49px;
+            }
+
+            .arrow {
+                bottom: auto;
+                top: -8px;
+            }
+        }
+
+        h3 {
+            color: $black;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.4s ease;
+
+            span {
+                color: $body-color;
+                font-size: 13px;
+                display: block;
+                margin-top: 10px;
+                line-height: 22px;
+                transition: all 0.4s ease;
+            }
+        }
+    }
+}

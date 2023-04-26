@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Ma Librairie</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- =========== CSS here =========== -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/LineIcons.3.0.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/tiny-slider.css" />
+    <link rel="stylesheet" href="assets/css/glightbox.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    
+  </head>
+
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="preloader-inner">
+        <div class="preloader-icon">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- /End Preloader -->
+
+    <!-- Start Header Area -->
+    <header class="header navbar-area">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12">
+            <div class="nav-inner">
+              <!-- Start Navbar -->
+              <nav class="navbar navbar-expand-lg">
+                <!-- navbar collapse -->
+                <div class="button">
+                  <a href="login" class="btn">Connexion</a>
+                </div>
+
+                <!-- <button
+                  class="navbar-toggler mobile-menu-btn"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="toggler-icon"></span>
+                  <span class="toggler-icon"></span>
+                  <span class="toggler-icon"></span>
+                </button> -->
+                <div
+                  class="collapse navbar-collapse sub-menu-bar"
+                  id="navbarSupportedContent"
+                >
+                  <ul id="nav" class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                      <a
+                        href="index"
+                        class="active"
+                        aria-label="Toggle navigation"
+                        >Accueil</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="books" aria-label="Toggle navigation"
+                        >Les Livres</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="authors" aria-label="Toggle navigation"
+                        >Les Auteurs</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+              <!-- End Navbar -->
+            </div>
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </header>
+    <!-- End Header Area -->
+    <!-- Start Footer Area -->
+    <footer>
+      <div>
+        <!-- Start Copyright Area -->
+        <div class="copyright-area">
+          <div class="container">
+            <div class="inner-content">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                  <p class="copyright-text">
+                    © 2023 Ma Librairie - Tous Droits Réservés
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- End Copyright Area -->
+    </footer>
+    <!--/ End Footer Area -->
+
+    <!-- ========================= JS here ========================= -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/tiny-slider.js"></script>
+    <script src="assets/js/glightbox.min.js"></script>
+    <script src="assets/js/count-up.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      //========= Road Map
+      tns({
+        container: ".road-map-slider",
+        items: 1,
+        slideBy: "page",
+        autoplay: false,
+        mouseDrag: true,
+        gutter: 0,
+        nav: true,
+        controls: false,
+        responsive: {
+          0: {
+            items: 2,
+          },
+          540: {
+            items: 3,
+          },
+          768: {
+            items: 4,
+          },
+          992: {
+            items: 4,
+          },
+          1170: {
+            items: 6,
+          },
+        },
+      });
+
+      //========= testimonial
+      tns({
+        container: ".testimonial-slider",
+        items: 3,
+        slideBy: "page",
+        autoplay: false,
+        mouseDrag: true,
+        gutter: 0,
+        nav: true,
+        controls: false,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          540: {
+            items: 1,
+          },
+          768: {
+            items: 2,
+          },
+          992: {
+            items: 2,
+          },
+          1170: {
+            items: 3,
+          },
+        },
+      });
+
+      //====== counter up
+      var cu = new counterUp({
+        start: 0,
+        duration: 2000,
+        intvalues: true,
+        interval: 100,
+        append: " ",
+      });
+      cu.start();
+
+      //========= glightbox
+      GLightbox({
+        href: "https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM",
+        type: "video",
+        source: "youtube", //vimeo, youtube or local
+        width: 900,
+        autoplayVideos: true,
+      });
+    </script>
+  </body>
+</html>

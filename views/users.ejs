@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Utilisateurs</title>
+  </head>
+  <body>
+    <h1>Liste des utilisateurs</h1>
+    <ul>
+      <% users.forEach((user) => { %>
+      <li>
+        <b>Id:</b> <%= user.id %> - Pseudo: <%= user.pseudo %> - Lastname: <%=
+        user.lastname %> - Contry Id: <%= user.id_country %> - Created At: <%=
+        user.created_at %>
+      </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>

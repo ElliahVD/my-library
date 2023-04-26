@@ -1,0 +1,95 @@
+/*======================================
+    Get Started CSS
+========================================*/
+.start-process {
+    background-color: $gray;
+
+    &.dark {
+        background-color: $black;
+
+        .section-title {
+            h3 {
+                color: $white;
+            }
+
+            h2 {
+                color: $white;
+            }
+
+            p {
+                color: $white;
+            }
+        }
+
+        .single-process {
+            h3 {
+                color: $white;
+            }
+
+            p {
+                color: rgb(218, 218, 218);
+            }
+        }
+    }
+
+    .section-title {
+        margin-bottom: 50px;
+
+        @media #{$md} {
+            margin-bottom: 30px;
+        }
+
+        @media #{$xs} {
+            margin-bottom: 20px;
+        }
+    }
+
+    .single-process {
+        position: relative;
+        padding-left: 100px;
+        margin-top: 40px;
+
+        @media #{$md,$xs} {
+            padding: 0;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .serial {
+            height: 70px;
+            width: 70px;
+            line-height: 70px;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 18px;
+            font-weight: 700;
+            background-color: $white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.089);
+            position: absolute;
+            left: 0;
+            color: $black;
+            top: 0;
+            transition: all 0.4s ease;
+
+            @media #{$md,$xs} {
+                position: relative;
+                text-align: center;
+                display: inline-block;
+                margin-bottom: 30px;
+            }
+        }
+
+        &:hover {
+            .serial {
+                background-color: $theme-color;
+                color: $white;
+            }
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    }
+}

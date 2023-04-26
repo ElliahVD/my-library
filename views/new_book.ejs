@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ajouter un livre</title>
+  </head>
+  <body>
+    <h1>Ajouter un livre</h1>
+    <form method="POST">
+      <label for="titre">Titre :</label>
+      <input type="text" id="titre" name="titre" value="<%= titre %>" required><br><br>
+
+      <label for="resume">Résumé :</label>
+      <textarea id="resume" name="resume" required><%= resume %></textarea><br><br>
+
+      <label for="datePublication">Date de publication :</label>
+      <input type="date" id="datePublication" name="datePublication" value="<%= datePublication %>" required><br><br>
+
+      <label for="auteur">Auteur :</label>
+      <input type="text" id="auteur" name="auteur" value="<%= auteur %>" required><br><br>
+
+      <label for="genre">Genre :</label>
+      <select id="genre" name="genre" required>
+        <option value="">--Choisir un genre--</option>
+        <option value="Roman" <%= genre === 'Roman' ? 'selected' : '' %>>Roman</option>
+        <option value="Science-fiction" <%= genre === 'Science-fiction' ? 'selected' : '' %>>Science-fiction</option>
+        <option value="Thriller" <%= genre === 'Thriller' ? 'selected' : '' %>>Thriller</option>
+        <option value="Policier" <%= genre === 'Policier' ? 'selected' : '' %>>Policier</option>
+        <option value="Fantasy" <%= genre === 'Fantasy' ? 'selected' : '' %>>Fantasy</option>
+    </select><br><br>
+
+    <input type="submit" value="Ajouter">
+  </form>
+</body>
+</html>
