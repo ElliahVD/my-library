@@ -16,7 +16,7 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
-      // encodeData prend en entrée des data
+      // encodeData prend en entrée des data et restitu de la data
       function encodedData(data) {
         return Object.entries(data)
           .map(
@@ -42,7 +42,7 @@
             "NEW_USER PAGE -- insertUser -- data.pseudo:",
             data.pseudo
           );
-
+          // le user n'est pas inséré en base de donné, le data envoyé n'est pas récupéré, la donnée n'arrive pas au controleur
           const response = await axios({
             method: "POST",
             url: "/users",

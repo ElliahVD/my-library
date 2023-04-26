@@ -29,6 +29,7 @@ async function connect(req: Request, res: Response) {
         const user: User = await userDb.getUserByPseudoPassword(pseudo, password);
         console.log('USER CTRL -- test -- result: ', result);
         if (result) {
+            //! le user se connecte, on voit true dans les logs consoles, mais pas de redirection page users depuis le userController
             return res.status(200).render('users', { users: [user] });
         } else {
             res.status(403).render('login', { message: 'Failed connection' });

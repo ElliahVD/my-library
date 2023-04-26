@@ -54,7 +54,7 @@
           console.log("LOGIN PAGE -- connectUser -- data.pseudo:", data.pseudo);
           const encodedData = encodeFormData(data);
           console.log("LOGIN PAGE -- connectUser -- encodedData:", encodedData);
-          
+// le user se connecte, on voit true dans les logs consoles, mais pas de redirection page users depuis le userController
           const response = await axios({
             method: "POST",
             url: "/connect?" + encodedData,
